@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
-import { boolean } from 'zod';
+import dotenv from 'dotenv';
+dotenv.config({ path: './config.env' });
 
 mongoose.connect(
-	'mongodb+srv://aashish:rasberryPie@cluster0.nziiui6.mongodb.net/cohort'
+	`mongodb+srv://aashish:${process.env.password}@cluster0.nziiui6.mongodb.net/cohort`
 );
 
+console.log(process.env);
 const todoSchema = mongoose.Schema({
 	title: String,
 	description: String,
@@ -13,4 +15,4 @@ const todoSchema = mongoose.Schema({
 
 const Todos = mongoose.model('Todo', todoSchema);
 
-export default Todos
+export default Todos;
