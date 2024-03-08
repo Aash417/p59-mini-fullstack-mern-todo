@@ -1,0 +1,17 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.container {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  padding: 10px; /* Optional: Add padding for spacing */
+  border: 1px solid #ccc; /* Optional: Add a border for visualization */
+}
